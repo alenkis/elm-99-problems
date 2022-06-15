@@ -5,7 +5,11 @@ This repo implements solutions (to some problems) by using `Elm`.
 
 ## Instructions
 
-`master` branch contains function definitions with type signatures (without implementation) and unit tests. You can try your solutions by running test suite in parallel with
+`master` branch contains function definitions with type signatures (without implementation) and unit tests.
+
+As you start working on a function, uncomment a test suite in `tests/Tests.elm`. The test should initially fail with "not implemented" message.
+
+You can try your solutions by running test suite in parallel with
 
 ```sh
 elm-app test --watch

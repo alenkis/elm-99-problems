@@ -34,3 +34,10 @@ duplicate l =
 
         x :: xs ->
             x :: x :: duplicate xs
+
+
+isPalindrome : List a -> Bool
+isPalindrome l =
+    -- Find out whether a list is a palindrome.
+    -- HINT: a palindrome is its own reverse.
+    l == List.reverse l
