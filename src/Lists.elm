@@ -18,3 +18,10 @@ duplicate l =
     -- Duplicate the elements of a list.
     -- e.g. [1,2,3] -> [1,1,2,2,3,3]
     Debug.todo "not implemented"
+
+
+isPalindrome : List a -> Bool
+isPalindrome l =
+    -- Find out whether a list is a palindrome.
+    -- HINT: a palindrome is its own reverse.
+    Debug.todo "not implemented"

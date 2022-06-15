@@ -35,4 +35,16 @@ all =
         --     , test "returns a duplicated list of strings" <|
         --         \_ -> Expect.equal [ "a", "a", "b", "b" ] (Lists.duplicate [ "a", "b" ])
         --     ]
+        -- , describe "Lists.isPalindrome"
+        --     [ test "returns true for empty list" <|
+        --         \_ -> Expect.equal True (Lists.isPalindrome [])
+        --     , test "returns true for palindrome list of Int" <|
+        --         \_ -> Expect.equal True (Lists.isPalindrome [ 1, 2, 3, 2, 1 ])
+        --     , test "returns true for palindrome list of Char" <|
+        --         \_ -> Expect.equal True (Lists.isPalindrome [ 'a', 'b', 'c', 'b', 'a' ])
+        --     , test "returns false for non palindrome list of Int" <|
+        --         \_ -> Expect.equal False (Lists.isPalindrome [ 1, 2, 3 ])
+        --     , test "returns false for non palindrome list of Char" <|
+        --         \_ -> Expect.equal False (Lists.isPalindrome [ 'a', 'b' ])
+        --     ]
         ]
