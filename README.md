@@ -1,6 +1,6 @@
 # 99 Problems
 
-Solutions to 99 problems initially created for Prolog ([https://sites.google.com/site/prologsite/prolog-problems](Prolog problems)), but since implemented in many other languages, including [https://ocaml.org/problems](Ocaml exercises).
+Solutions to 99 problems initially created for Prolog ([Prolog problems](https://sites.google.com/site/prologsite/prolog-problems)), but since implemented in many other languages, including [Ocaml exercises](https://ocaml.org/problems).
 This repo implements solutions (to some problems) by using `Elm`.
 
 ## Instructions
