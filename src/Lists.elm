@@ -47,7 +47,19 @@ compress : List a -> List a
 compress l =
     -- Eliminate consecutive duplicates of list elements.
     -- e.g. [1,1,1,2,2,3,1,1] -> [1,2,3,1]
-    Debug.todo "not implemented"
+    case l of
+        [] ->
+            []
+
+        [ x ] ->
+            [ x ]
+
+        x :: ((y :: _) as tail) ->
+            if x == y then
+                compress tail
+
+            else
+                x :: compress tail
 
 
 runLenghtEncoding : List a -> List ( Int, a )
