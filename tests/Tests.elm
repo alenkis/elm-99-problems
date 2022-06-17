@@ -53,7 +53,7 @@ all =
         --     , test "returns unchanged list when there are no consecutive duplicates" <|
         --         \_ -> Expect.equal [ 1, 2, 3 ] (Lists.compress [ 1, 2, 3 ])
         --     ]
-        -- , describe "Lists.runLenghtEncoding"
+        -- , describe "Lists.runLengthEncode"
         --     [ test "Int: encodes list with consecutive duplicates correctly" <|
         --         \_ -> Expect.equal [ ( 4, 1 ), ( 3, 2 ), ( 1, 5 ) ] (Lists.runLengthEncode [ 1, 1, 1, 1, 2, 2, 2, 5 ])
         --     , test "String: encodes list with consecutive duplicates correctly" <|
