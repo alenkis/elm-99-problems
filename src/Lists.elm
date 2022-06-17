@@ -89,7 +89,17 @@ runLengthEncode l =
 
 
 dropNth : List a -> Int -> List a
-dropNth l =
+dropNth l n =
     -- Drop every N'th element from a list.
     -- e.g. ["a", "b", "c", "d", "e"] 2 -> ["a", "c", "e"]
-    Debug.todo "not implemented"
+    l
+        |> List.indexedMap
+            (\idx el ->
+                if modBy n (idx + 1) == 0 then
+                    -- mark nth element for dropping
+                    Nothing
+
+                else
+                    Just el
+            )
+        |> List.filterMap identity
