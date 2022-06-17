@@ -55,11 +55,11 @@ all =
         --     ]
         -- , describe "Lists.runLenghtEncoding"
         --     [ test "Int: encodes list with consecutive duplicates correctly" <|
-        --         \_ -> Expect.equal [ ( 4, 1 ), ( 3, 2 ), ( 1, 5 ) ] (Lists.compress [ 1, 1, 1, 1, 2, 2, 2, 5 ])
+        --         \_ -> Expect.equal [ ( 4, 1 ), ( 3, 2 ), ( 1, 5 ) ] (Lists.runLengthEncode [ 1, 1, 1, 1, 2, 2, 2, 5 ])
         --     , test "String: encodes list with consecutive duplicates correctly" <|
-        --         \_ -> Expect.equal [ ( 3, "a" ), ( 2, "b" ), ( 4, "c" ) ] (Lists.compress [ "a", "a", "a", "b", "b", "c", "c", "c", "c" ])
+        --         \_ -> Expect.equal [ ( 3, "a" ), ( 2, "b" ), ( 4, "c" ) ] (Lists.runLengthEncode [ "a", "a", "a", "b", "b", "c", "c", "c", "c" ])
         --     , test "returns empty list if given an empty list" <|
-        --         \_ -> Expect.equal [] (Lists.compress [])
+        --         \_ -> Expect.equal [] (Lists.runLengthEncode [])
         --     ]
         -- , describe "Lists.dropNth"
         --     [ test "correctly drops every nth element" <|

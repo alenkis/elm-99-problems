@@ -62,13 +62,30 @@ compress l =
                 x :: compress tail
 
 
-runLenghtEncoding : List a -> List ( Int, a )
-runLenghtEncoding l =
+runLengthEncode : List a -> List ( Int, a )
+runLengthEncode l =
     -- https://en.wikipedia.org/wiki/Run-length_encoding
     -- "pack" consecutive elements into tuples that contain the
     -- number of ocurrences and the value itself
     -- e.g. ["a", "a", "b"] -> [(2, "a"), (1, "b")]
-    Debug.todo "not implemented"
+    case l of
+        [] ->
+            []
+
+        [ x ] ->
+            [ ( 1, x ) ]
+
+        x :: xs ->
+            case runLengthEncode xs of
+                [] ->
+                    []
+
+                ( n, y ) :: ys ->
+                    if x == y then
+                        ( n + 1, x ) :: ys
+
+                    else
+                        ( 1, x ) :: ( n, y ) :: ys
 
 
 dropNth : List a -> Int -> List a
