@@ -34,8 +34,8 @@ compress l =
     Debug.todo "not implemented"
 
 
-runLenghtEncoding : List a -> List ( Int, a )
-runLenghtEncoding l =
+runLengthEncode : List a -> List ( Int, a )
+runLengthEncode l =
     -- https://en.wikipedia.org/wiki/Run-length_encoding
     -- "pack" consecutive elements into tuples that contain the
     -- number of ocurrences and the value itself
@@ -44,7 +44,7 @@ runLenghtEncoding l =
 
 
 dropNth : List a -> Int -> List a
-dropNth l =
+dropNth l n =
     -- Drop every N'th element from a list.
     -- e.g. ["a", "b", "c", "d", "e"] 2 -> ["a", "c", "e"]
     Debug.todo "not implemented"
